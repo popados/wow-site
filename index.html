@@ -1,301 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WoW Fan Site</title>
-  <style>
-    /* Global Styles */
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #1a1a1a;
-      color: #f5f5f5;
-    }
-    h1, h2, h3 {
-      font-family: 'Cinzel', serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-    span{
-      font-size: 250px;
-      display: flex;
-      margin: -50px;
-      justify-content: center;
-    }
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #2b1f1f;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 20px;
-      border-bottom: 5px solid #6d3b1f;
-      z-index: 1000;
-    }
-    nav a {
-      color: #f5f5f5;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      color: #d4af37; /* Gold hover */
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WoW Fan Site</title>
+    <link rel="stylesheet" href="./css/default.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#blog">Blog</a>
+      <a href="#addons">Addons</a>
+      <a href="#macros">Macros</a>
+      <a href="#shop">Shop</a>
+    </nav>
 
-/* Hero Section */
-#hero {
-  position: relative;
-  height: 100vh;
-  background: url('https://bnetcmsus-a.akamaihd.net/cms/gallery/Z6G9DZK2LOE01567110964442.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-shadow: 2px 2px 8px black;
-  overflow: hidden;
-}
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-overlay">
+        <h1>World of Warcraft</h1>
+        <p class="faction-text">
+          <span class="horde">Horde</span>
+          <span class="swords">⚔</span>
+          <span class="alliance">Alliance</span>
+        </p>
+      </div>
+      <div class="hero-factions">
+        <div class="faction alliance">
+          <img src="./img/alliance-symbol.png" alt="Alliance" />
+        </div>
+        <div class="faction horde">
+          <img src="./img/horde-symbol2.png" alt="Horde" />
+        </div>
+      </div>
+      <div class="hero-divider"></div>
+    </section>
 
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <!-- About -->
 
-#hero h1 {
-  font-size: 4rem;
-  /* margin: 10rem; */
-  font-family: 'Cinzel', serif;
-  color: #f5f5f5;
-}
+        <div class="panel">
+          <div class="panel-content">
+            <h2>About Me</h2>
+            <ul>
+              <li>On and off since original Vanilla.</li>
+              <li>Never played The Burning Crusade (TBC).</li>
+              <li>Started raiding in Wrath — raided through to the end of MoP.</li>
+              <li>Quit until Shadowlands; returned for Castle Nathria.</li>
+              <li>Currently playing on anniversary servers.</li>
+            </ul>
 
-.faction-text {
-  font-size: 1.5rem;
-  margin-top: 350px;
-  font-weight: bold;
-  color: #d4af37;
-}
+        <h2>About Me</h2>
+        <p>
+          I've been a part of <strong>World of Warcraft</strong> on and off
+          since the days of <em>Vanilla</em>. I skipped
+          <em>The Burning Crusade</em>, but came back strong in
+          <em>Wrath of the Lich King</em> where I started raiding seriously all
+          the way through to the end of <em>Mists of Pandaria</em>.
+        </p>
+        <p>
+          After that, I took a long break from Azeroth, only returning for
+          <em>Shadowlands</em> during <strong>Castle Nathria</strong>. These
+          days, I'’'m diving into the <strong>Anniversary Servers</strong> to
+          relive the classic adventures and challenge myself all over again.
+        </p>
+        <p>
+          Outside of gaming I also explore new tech trends. Feel free to connect
+          with me on social media or check out my blog for more insights into my
+          WoW journey and other interests!
+        </p>
 
-/* Faction Split */
-.hero-factions {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  z-index: 1;
-  opacity: 0.25;
-}
-.hero-factions .faction {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      </div>
+        </div>
+      </div>
+    </section>
 
-.hero-factions .alliance {
-  background: rgba(30, 60, 120, 0.5); 
-  /* Alliance blue */
-}
-
-.hero-factions .horde {
-    /* background-image: url("/img/horde-symbol.png") norepeat; */
-  background: rgba(232, 232, 232, 0.5);
-  
-  /* Horde red */
-}
-
-.hero-factions img {
-  width: 90%;
-  height: auto;
-filter: grayscale(100%) contrast(50%);
-}
-
-/* Brutalistic Divider */
-.hero-divider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: #2b1f1f;
-  clip-path: polygon(0 70%, 100% 0, 100% 100%, 0% 100%);
-  border-top: 5px solid #6d3b1f;
-}
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <img
+        src="https://wow.zamimg.com/uploads/screenshots/normal/12345.jpg"
+        alt="WoW Screenshot"
+      />
+      <img
+        src="https://wow.zamimg.com/uploads/screenshots/normal/54321.jpg"
+        alt="WoW Screenshot"
+      />
+      <img
+        src="https://wow.zamimg.com/uploads/screenshots/normal/67890.jpg"
+        alt="WoW Screenshot"
+      />
+    </section>
 
 
-    /* About */
-    #about {
-      background: #2e2a24;
-    }
-
-    /* Gallery */
-    #gallery {
-      background: #3b2f2f;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    #gallery img {
-      width: 100%;
-      border: 5px solid #6d3b1f;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Blog */
-    #blog {
-      background: #262626;
-    }
-    .blog-post {
-      max-width: 800px;
-      margin: 20px auto;
-      background: #1e1e1e;
-      padding: 20px;
-      border-left: 5px solid #d4af37;
-      text-align: left;
-    }
-
-    /* Addons */
-    #addons {
-      background: #2a2f24;
-    }
-    pre {
-      background: #111;
-      color: #0f0;
-      padding: 15px;
-      overflow-x: auto;
-      border: 2px solid #444;
-      border-radius: 5px;
-      text-align: left;
-    }
-
-    /* Macros */
-    #macros {
-      background: #2f262a;
-    }
-
-    /* Shop */
-    #shop {
-      background: #3a2f24;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .shop-item {
-      background: #1e1e1e;
-      padding: 20px;
-      border: 3px solid #6d3b1f;
-      border-radius: 8px;
-    }
-    .shop-item h3 {
-      color: #d4af37;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#blog">Blog</a>
-    <a href="#addons">Addons</a>
-    <a href="#macros">Macros</a>
-    <a href="#shop">Shop</a>
-  </nav>
-
-
- <!-- Hero Section -->
-<section id="hero">
-  <div class="hero-overlay">
-      <h1>World of Warcraft</h1>
-      <p class="faction-text">Alliance <span>⚔</span> Horde</p>
-  </div>
-  <div class="hero-factions">
-    <div class="faction alliance">
-      <img src="./img/alliance-symbol.png" alt="Alliance">
-    </div>
-    <div class="faction horde">
-      <img src="./img/horde-symbol2.png" alt="Horde">
-    </div>
-  </div>
-  <div class="hero-divider"></div>
-</section>
-
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’ve been playing World of Warcraft since Burning Crusade. Currently raiding with <strong>The Horde</strong> on Retail and Classic servers.</p>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <img src="https://wow.zamimg.com/uploads/screenshots/normal/12345.jpg" alt="WoW Screenshot">
-    <img src="https://wow.zamimg.com/uploads/screenshots/normal/54321.jpg" alt="WoW Screenshot">
-    <img src="https://wow.zamimg.com/uploads/screenshots/normal/67890.jpg" alt="WoW Screenshot">
-  </section>
-
-  <!-- Blog -->
-  <section id="blog">
-    <h2>Blog</h2>
-    <div class="blog-post">
-      <h3>Guide: Leveling in Classic WoW</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod metus in pulvinar...</p>
-    </div>
-    <div class="blog-post">
-      <h3>Review: Dragonflight Expansion</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod metus in pulvinar...</p>
-    </div>
-  </section>
-
-  <!-- Addons -->
-  <section id="addons">
-    <h2>Addons & LUA</h2>
-    <p>Learn how to create WoW addons, or browse popular ones.</p>
-    <pre>
+    <!-- Addons -->
+    <section id="addons">
+      <h2>Addons & LUA</h2>
+      <p>Learn how to create WoW addons, or browse popular ones.</p>
+      <pre>
 -- Example Lua Addon
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 frame:SetScript("OnEvent", function()
   print("Welcome to Azeroth!")
 end)
-    </pre>
-  </section>
+    </pre
+      >
+    </section>
 
-  <!-- Macros -->
-  <section id="macros">
-    <h2>Macros</h2>
-    <p>Useful macros for PvP, PvE, and general gameplay.</p>
-    <pre>
+    <!-- Macros -->
+    <section id="macros">
+      <h2>Macros</h2>
+      <p>Useful macros for PvP, PvE, and general gameplay.</p>
+      <pre>
 /cast [@focus] Polymorph
-    </pre>
-  </section>
+    </pre
+      >
+    </section>
 
-  <!-- Shop -->
-  <section id="shop">
-    <h2>Shop</h2>
-    <div class="shop-item">
-      <h3>Horde T-Shirt</h3>
-      <p>Bold red Horde emblem on black fabric.</p>
-    </div>
-    <div class="shop-item">
-      <h3>Mechanical Gaming Keyboard</h3>
-      <p>RGB backlight, perfect for raiding late nights.</p>
-    </div>
-  </section>
-
-</body>
+    <!-- Shop -->
+    <section id="shop">
+      <h2>Shop</h2>
+      <div class="shop-item">
+        <h3>Horde T-Shirt</h3>
+        <p>Bold red Horde emblem on black fabric.</p>
+      </div>
+      <div class="shop-item">
+        <h3>Mechanical Gaming Keyboard</h3>
+        <p>RGB backlight, perfect for raiding late nights.</p>
+      </div>
+    </section>
+  </body>
 </html>

@@ -163,6 +163,17 @@ update hero section to include a picture and frame/diagonal line that shows alli
 
 ---
 
+### Day 002 | 10/3/2025 - Friday
+
+
+fix the margins for the about section and write small copy that states
+-on off since vanilla
+- never played tbc
+- started raiding in wrath to the end of MoP
+- quit playing until shadowlands: castle nathria
+- currently playing anniversary severs
+---
+
 ## End of Document
 
 ---
