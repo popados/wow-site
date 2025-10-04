@@ -172,6 +172,8 @@ fix the margins for the about section and write small copy that states
 - started raiding in wrath to the end of MoP
 - quit playing until shadowlands: castle nathria
 - currently playing anniversary severs
+
+
 ---
 
 ## End of Document

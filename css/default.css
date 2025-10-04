@@ -51,9 +51,9 @@ section {
 
   color: #dba25d;
   margin-bottom: -30px;
-  margin-top: -60px;
+  margin-top: -40px;
   justify-content: center;
-  font-size: 200px;
+  /* font-size: 200px; */
 }
 
 .alliance {
@@ -163,8 +163,9 @@ nav a:hover {
   align-items: center;
   flex-direction: column;
   /* font-size: 1.5rem; */
-  margin-top: 300px;
-  font-weight: 700;
+  /* margin-top: 300px; */
+  margin-top: 150px;
+  font-size: 120px;
 }
 
 /* Faction Split */
@@ -217,6 +218,41 @@ nav a:hover {
   background: #2b1f1f;
   clip-path: polygon(0 70%, 100% 0, 100% 100%, 0% 100%);
   border-top: 5px solid #6d3b1f;
+}
+
+/* Reusable brutalistic divider for sections */
+.brutal-divider {
+  width: 100%;
+  height: 120px;
+  background: #2b1f1f;
+  clip-path: polygon(0 70%, 100% 0, 100% 100%, 0% 100%);
+  border-top: 5px solid #6d3b1f;
+}
+
+@media (max-width: 700px) {
+  .brutal-divider { height: 90px; clip-path: polygon(0 65%, 100% 0, 100% 100%, 0% 100%); border-top-width: 4px; }
+}
+
+/* Match divider color to the section it follows */
+section#about + .brutal-divider {
+  background: #2e2a24; /* matches #about */
+  border-top-color: #6d3b1f;
+}
+
+section#gallery + .brutal-divider {
+  background: #3b2f2f; /* matches #gallery */
+  border-top-color: #6d3b1f;
+}
+
+section#addons + .brutal-divider {
+  background: #2a2f24; /* matches #addons */
+  border-top-color: #6d3b1f;
+}
+
+section#hero + .brutal-divider {
+  /* keep hero transition feel (image to dark) */
+  background: linear-gradient(180deg, rgba(43,31,31,0) 0%, #2b1f1f 45%, #2b1f1f 100%);
+  border-top-color: #6d3b1f;
 }
 
 /* About */
