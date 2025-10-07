@@ -5,7 +5,7 @@
 
 # Readme File | wow-blog | September-23-2025 |
 
-[My Github](https://github.com/popados) | [Jump to End](#end-of-doc)
+[My Github](https://github.com/popados) | [WoW Site](https://popados.github.io/wow-site) | [Jump to End](#end-of-doc)
 
 ---
 

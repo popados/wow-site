@@ -19,6 +19,16 @@ body {
   --nav-bg-color: #1c1d21;
   --link-color: #f0b729;
   --last-color: #a4d2d1;
+
+  --hero-bg: #151212;     /* fallback / unused directly */
+  --about-bg: #2e2a24;
+  --gallery-bg: #3b2f2f;
+  --macros-bg: #2b2b30;
+  --addons-bg: #2a2f24;
+  --shop-bg: #241f1f;
+
+  --panel-bg: rgba(0,0,0,0.45);
+  --panel-ink: #e7e2d9;
 }
 
 a {
@@ -45,6 +55,9 @@ h3 {
 section {
   padding: 60px 20px;
   text-align: center;
+  background-color: var(--hero-bg);
+  color: var(--panel-ink);
+  transition: background-color 300ms ease;
 }
 .swords {
   /* margin: -50px; */
@@ -235,17 +248,17 @@ nav a:hover {
 
 /* Match divider color to the section it follows */
 section#about + .brutal-divider {
-  background: #2e2a24; /* matches #about */
+  background: var(--addons-bg); /* matches #about */
   border-top-color: #6d3b1f;
 }
 
 section#gallery + .brutal-divider {
-  background: #3b2f2f; /* matches #gallery */
+  background: var(--macros-bg); /* matches #gallery */
   border-top-color: #6d3b1f;
 }
 
 section#addons + .brutal-divider {
-  background: #2a2f24; /* matches #addons */
+  background: var(--addons-bg); /* matches #addons */
   border-top-color: #6d3b1f;
 }
 
@@ -383,7 +396,7 @@ pre {
 
 /* Macros */
 #macros {
-  background: #2f262a;
+  background: var(--about-bg);
 }
 
 /* Shop */
@@ -410,3 +423,37 @@ pre {
 .faction-text .horde {
   color: #ffdcc2;
 } /* warm ivory for contrast against crimson */
+
+/* Ensure panels / cards still contrast on top of new section colors */
+#about .panel,
+.panel {
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.45));
+  color: var(--panel-ink);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Tweak brutal-divider to blend with the section that follows it */
+section + .brutal-divider {
+  /* if the divider follows a section, pick the section-after-divider color via selectors */
+  background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.12));
+  pointer-events: none;
+}
+
+/* Specific divider colors to better match the following section */
+/* Optional: ensure headings maintain contrast */
+section h2, section h1 {
+  color: #f3efe8;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Small-screen tweak to reduce intensity */
+@media (max-width: 700px){
+  :root{
+    --about-bg: #2f2a26;
+    --gallery-bg: #352f2f;
+    --macros-bg: #28282d;
+    --addons-bg: #273022;
+    --shop-bg: #201a1a;
+  }
+  section { transition: none; }
+}

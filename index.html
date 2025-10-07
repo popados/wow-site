@@ -10,12 +10,12 @@
     <!-- Navigation -->
     <nav>
       <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#blog">Blog</a>
-      <a href="#addons">Addons</a>
-      <a href="#macros">Macros</a>
-      <a href="#shop">Shop</a>
+      <a href="#about-nav">About</a>
+      <a href="#gallery-nav">Gallery</a>
+      <a href="#blog-nav">Blog</a>
+      <a href="#macros-nav">Macros</a>
+      <a href="#addons-nav">Addons</a>
+      <a href="#shop-nav">Shop</a>
     </nav>
 
     <!-- Hero Section -->
@@ -36,7 +36,7 @@
           <img src="./img/horde-symbol2.png" alt="Horde" />
         </div>
       </div>
-      <div class="hero-divider"></div>
+      <div class="hero-divider" id="about-nav"></div>
     </section>
 
 
@@ -50,15 +50,20 @@
         <h2>About Me</h2>
         <p>
           I've been a part of <strong>World of Warcraft</strong> on and off
-          since the days of <em>Vanilla</em>. I skipped
-          <em>The Burning Crusade</em>, but came back strong in
-          <em>Wrath of the Lich King</em> where I started raiding seriously all
-          the way through to the end of <em>Mists of Pandaria</em>.
+          since the days of <em><strong>Vanilla</strong></em>. 
+        </p>
+          <p>   
+          Skipping over the expansion:
+          <em><strong>The Burning Crusade</strong></em>, I returned with more strength for raiding during
+          <em><strong>Wrath of the Lich King</strong></em>. My goals were serious through to the end of <em><strong>Mists of Pandaria</strong></em>. Which is three expansions of solid raiding experience.
         </p>
         <p>
           After that, I took a long break from Azeroth, only returning for
-          <em>Shadowlands</em> during <strong>Castle Nathria</strong>. These
-          days, I'’'m diving into the <strong>Anniversary Servers</strong> to
+          <em><strong>Shadowlands</strong></em> during <strong>Castle Nathria</strong>. 
+          </p>
+          <p>
+          These
+          days, I'm diving into the <strong>Anniversary Servers</strong> to
           relive the classic adventures and challenge myself all over again.
         </p>
         <p>
@@ -79,7 +84,7 @@
       </div>
     </section>
 
-  <div class="brutal-divider" aria-hidden="true"></div>
+  <div class="brutal-divider" id="gallery-nav" aria-hidden="true"></div>
 
     <!-- Gallery -->
     <section id="gallery">
@@ -98,36 +103,36 @@
       />
     </section>
 
-  <div class="brutal-divider" aria-hidden="true"></div>
+  <div class="brutal-divider" id="macros-nav" aria-hidden="true"></div>
 
 
     <!-- Addons -->
-    <section id="addons">
-      <h2>Addons & LUA</h2>
-      <p>Learn how to create WoW addons, or browse popular ones.</p>
-      <pre>
--- Example Lua Addon
-local frame = CreateFrame("Frame")
-frame:RegisterEvent("PLAYER_ENTERING_WORLD")
-frame:SetScript("OnEvent", function()
-  print("Welcome to Azeroth!")
-end)
-    </pre
-      >
-    </section>
-  <div class="brutal-divider" aria-hidden="true"></div>
-
+    
     <!-- Macros -->
     <section id="macros">
       <h2>Macros</h2>
       <p>Useful macros for PvP, PvE, and general gameplay.</p>
       <pre>
-/cast [@focus] Polymorph
-    </pre
-      >
-    </section>
-  <div class="brutal-divider" aria-hidden="true"></div>
+        /cast [@focus] Polymorph
+        </pre
+        >
+      </section>
+      <div class="brutal-divider" id="addons-nav" aria-hidden="true"></div>
 
+      <section id="addons">
+        <h2>Addons & LUA</h2>
+        <p>Learn how to create WoW addons, or browse popular ones.</p>
+        <pre>
+  -- Example Lua Addon
+  local frame = CreateFrame("Frame")
+  frame:RegisterEvent("PLAYER_ENTERING_WORLD")
+  frame:SetScript("OnEvent", function()
+    print("Welcome to Azeroth!")
+  end)
+      </pre>
+    </section>
+    
+      
     <!-- Shop -->
     <section id="shop">
       <h2>Shop</h2>
